@@ -21,13 +21,17 @@
   --lesser-font: 13px;
   /*p*/
   --tiny-font: 12px;
+
+  /*BLOCKS SHADOW & RADIUS*/
+  --block-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  --block-radius: 5px;
 }
 
 body {
   margin: 0;
   /*text-size/line-height, types*/
   font: 100%/1.5 "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 600;
   height: 100vh;
   font-kerning: normal;
 }
@@ -35,9 +39,9 @@ body {
 h1,
 h2,
 h3,
-h4 {
+h4,
+p {
   margin: 0;
-  font-weight: 400;
 }
 
 h1 {
@@ -45,12 +49,15 @@ h1 {
 }
 h2 {
   font-size: var(--medium-font);
+  font-weight: 400;
 }
 h3 {
   font-size: var(--small-font);
 }
-h4 {
+h4,
+label {
   font-size: var(--lesser-font);
+  font-weight: 400;
 }
 p {
   font-size: var(--tiny-font);
@@ -58,4 +65,22 @@ p {
 
 body {
   background-color: var(--background-color);
+}
+
+.main {
+  margin: auto;
+  max-width: 960px;
+  display: flex;
+}
+
+.extra {
+  background-color: white;
+  box-shadow: var(--block-shadow);
+  border-radius: var(--block-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+label {
+  padding-left: 10px;
 }

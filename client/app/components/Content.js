@@ -7,12 +7,16 @@ import FlightList from "./FlightList"
 
 function Content() {
   return (
-    <>
-      <TransferList />
-      <CompanyList />
-      <ButtonPanel />
-      <FlightList />
-    </>
+    <div className="main">
+      <div className="menu-group">
+        <TransferList />
+        <CompanyList />
+      </div>
+      <div className="flight-group">
+        <ButtonPanel />
+        <FlightList />
+      </div>
+    </div>
   )
 }
 

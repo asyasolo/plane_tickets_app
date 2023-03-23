@@ -10,17 +10,25 @@ function TransferList() {
               <p>КОЛИЧЕСТВО ПЕРЕСАДОК</p>
             </legend>
 
-            <input type="checkbox" id="no_transfer" name="transfer" value="no_transfer" />
-            <label for="no_transfer">Без пересадок</label>
+            <div className="input-group">
+              <input type="checkbox" id="no_transfer" name="transfer" value="no_transfer" />
+              <label for="no_transfer">Без пересадок</label>
+            </div>
 
-            <input type="checkbox" id="transfer_one" name="transfer" value="transfer_one" />
-            <label for="transfer_one">Одна пересадка</label>
+            <div className="input-group">
+              <input type="checkbox" id="transfer_one" name="transfer" value="transfer_one" />
+              <label for="transfer_one">Одна пересадка</label>
+            </div>
 
-            <input type="checkbox" id="transfer_two" name="transfer" value="transfer_two" />
-            <label for="transfer_two">Две пересадки</label>
+            <div className="input-group">
+              <input type="checkbox" id="transfer_two" name="transfer" value="transfer_two" />
+              <label for="transfer_two">Две пересадки</label>
+            </div>
 
-            <input type="checkbox" id="transfer_three" name="transfer" value="transfer_three" />
-            <label for="transfer_three">Три пересадки</label>
+            <div className="input-group">
+              <input type="checkbox" id="transfer_three" name="transfer" value="transfer_three" />
+              <label for="transfer_three">Три пересадки</label>
+            </div>
           </form>
         </div>
       </div>

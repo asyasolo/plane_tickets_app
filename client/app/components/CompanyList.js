@@ -10,14 +10,19 @@ function CompanyList() {
               <p>КОМПАНИЯ</p>
             </legend>
 
-            <input type="radio" id="company_all" name="company" value="company_all" />
-            <label for="company_all">Все</label>
+            <div className="input-group">
+              <input type="radio" id="company_all" name="company" value="company_all" />
+              <label for="company_all">Все</label>
+            </div>
 
-            <input type="radio" id="company_s_seven" name="company" value="s_seven" />
-            <label for="company_s_seven">S7 Airlines</label>
-
-            <input type="radio" id="company_xiamenAir" name="company" value="xiamenAir" />
-            <label for="company_xiamenAir">XiamenAir</label>
+            <div className="input-group">
+              <input type="radio" id="company_s_seven" name="company" value="s_seven" />
+              <label for="company_s_seven">S7 Airlines</label>
+            </div>
+            <div className="input-group">
+              <input type="radio" id="company_xiamenAir" name="company" value="xiamenAir" />
+              <label for="company_xiamenAir">XiamenAir</label>
+            </div>
           </form>
         </div>
       </div>
