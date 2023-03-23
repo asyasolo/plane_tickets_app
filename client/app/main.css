@@ -1,0 +1,61 @@
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  /*COLOURS*/
+  --primary-blue: #2196f3;
+  --primary-red: #ff6f32;
+  --background-color: #f3f7fa;
+  --primary-shadow: #dadada;
+  --highlight-color: #f1fcff;
+
+  /*TYPOGRAPHY*/
+  /*h1*/
+  --large-font: 24px;
+  /*h2*/
+  --medium-font: 15px;
+  /*h3*/
+  --small-font: 14px;
+  /*h4*/
+  --lesser-font: 13px;
+  /*p*/
+  --tiny-font: 12px;
+}
+
+body {
+  margin: 0;
+  /*text-size/line-height, types*/
+  font: 100%/1.5 "Open Sans", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  font-kerning: normal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: var(--large-font);
+}
+h2 {
+  font-size: var(--medium-font);
+}
+h3 {
+  font-size: var(--small-font);
+}
+h4 {
+  font-size: var(--lesser-font);
+}
+p {
+  font-size: var(--tiny-font);
+}
+
+body {
+  background-color: var(--background-color);
+}

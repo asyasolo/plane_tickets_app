@@ -1,8 +1,16 @@
 import React from "react"
 import { createRoot } from "react-dom/client"
 
+import Header from "./components/Header"
+import Content from "./components/Content"
+
 function Main() {
-  return <h1>Workin'</h1>
+  return (
+    <>
+      <Header />
+      <Content />
+    </>
+  )
 }
 
 const root = createRoot(document.getElementById("app"))
