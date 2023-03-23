@@ -2,9 +2,9 @@ import React, { useEffect } from "react"
 
 function Header() {
   return (
-    <>
-      <h1>Header Workin'</h1>
-    </>
+    <div className="header-logo">
+      <img src="../img/Form.png" alt="" />
+    </div>
   )
 }
 
