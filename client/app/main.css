@@ -9,6 +9,7 @@
   --background-color: #f3f7fa;
   --primary-shadow: #dadada;
   --highlight-color: #f1fcff;
+  --gray-text-color: #a0b0b9;
 
   /*TYPOGRAPHY*/
   /*h1*/
@@ -46,6 +47,7 @@ p {
 
 h1 {
   font-size: var(--large-font);
+  color: var(--primary-blue);
 }
 h2 {
   font-size: var(--medium-font);
@@ -71,16 +73,79 @@ body {
   margin: auto;
   max-width: 960px;
   display: flex;
+  gap: 20px;
 }
 
 .extra {
   background-color: white;
   box-shadow: var(--block-shadow);
   border-radius: var(--block-radius);
-  padding: 20px;
+  padding: 20px 0;
   margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 20px 5px 20px;
+}
+
+.input-group {
+  padding: 5px 20px;
+}
+
+.input-group:hover {
+  background-color: var(--highlight-color);
 }
 
 label {
   padding-left: 10px;
+}
+
+/*BUTTONS*/
+
+.button-group {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.select-btn {
+  background-color: white;
+  border: 1px solid #dfe5ec;
+  padding: 15px;
+  flex: 1;
+}
+
+.select-btn:hover {
+  background-color: var(--highlight-color);
+}
+
+.select-btn:active {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+/*FLIGHTS*/
+
+.flight-item {
+  height: 135px;
+  width: 502px;
+  background-color: #fff;
+  border-radius: var(--block-radius);
+  box-shadow: var(--block-shadow);
+  margin-bottom: 20px;
+}
+
+.fligth-item-header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.flight-item-body {
+  display: flex;
+  padding: 5px 20px;
+  justify-content: space-between;
+}
+
+.gray {
+  color: var(--gray-text-color);
 }
