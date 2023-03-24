@@ -4,7 +4,7 @@ module.exports = {
   entry: "./app/Main.js",
   output: {
     publicPath: "/",
-    path: path.resolve(__dirname, "built"),
+    path: path.resolve(__dirname, "build"),
     filename: "bundled.js"
   },
   mode: "development",
