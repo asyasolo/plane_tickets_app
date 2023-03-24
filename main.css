@@ -117,12 +117,17 @@ body {
   color: green;
 }
 
+::placeholder {
+  padding-left: 15px;
+}
+
 .datepicker-input {
   padding-left: 15px;
 }
 
-::placeholder {
-  padding-left: 15px;
+.datepicker-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding-right: 15px;
 }
 
 /**/
