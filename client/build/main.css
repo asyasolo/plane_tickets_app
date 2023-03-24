@@ -77,7 +77,10 @@ body {
 .header-logo {
   display: flex;
   justify-content: center;
+  height: 60px;
 }
+
+/*CONTENT*/
 
 .main {
   margin: auto;
@@ -91,6 +94,8 @@ body {
   display: flex;
   gap: 20px;
 }
+
+/*MAIN FORM*/
 
 .avia-form {
   width: 725px;
@@ -116,12 +121,25 @@ body {
   padding-left: 15px;
 }
 
+.datepicker-input {
+  padding-left: 15px;
+}
+
+.datepicker-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding-right: 15px;
+}
+
+/**/
+
 hr {
   width: 725px;
   border: 1px solid var(--primary-shadow);
   transform: rotate(-0.08deg);
   margin-bottom: 25px;
 }
+
+/*OPTIONS*/
 
 .extra {
   background-color: white;
