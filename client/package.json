@@ -34,6 +34,7 @@
     "webpack-manifest-plugin": "^5.0.0"
   },
   "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
     "gh-pages": "^5.0.0"
   }
 }

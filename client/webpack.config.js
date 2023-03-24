@@ -2,6 +2,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin")
+const CopyPlugin = require("copy-webpack-plugin")
 
 const path = require("path")
 
@@ -13,7 +14,12 @@ const config = {
     path: path.resolve(__dirname, "build"),
     filename: "bundled.js"
   },
-  plugins: [new HtmlWebpackPlugin({ template: "./app/index.html" })],
+  plugins: [
+    new HtmlWebpackPlugin({ template: "./app/index.html" }),
+    new CopyPlugin({
+      patterns: [{ from: "./app/img", to: "./img" }]
+    })
+  ],
   mode: "development",
   devtool: "source-map",
   devServer: {
