@@ -8,23 +8,21 @@ import DestinationPanel from "./DestinationPanel"
 
 function Content() {
   return (
-    <>
-      <div className="main">
-        <DestinationPanel />
-        <hr />
-        <div className="main-group">
-          <div className="menu-group">
-            <TransferList />
-            <CompanyList />
-          </div>
-          <div className="flight-group">
-            <ButtonPanel />
-            <FlightList />
-            <button className="browse_btn">ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ</button>
-          </div>
+    <div className="main">
+      <DestinationPanel />
+      <hr />
+      <div className="main-group">
+        <div className="menu-group">
+          <TransferList />
+          <CompanyList />
+        </div>
+        <div className="flight-group">
+          <ButtonPanel />
+          <FlightList />
+          <button className="browse_btn">ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ</button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
