@@ -61,7 +61,8 @@ h3 {
   font-size: var(--small-font);
 }
 h4,
-label {
+label,
+::placeholder {
   font-size: var(--lesser-font);
   font-weight: 400;
 }
