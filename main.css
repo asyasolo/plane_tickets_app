@@ -77,7 +77,10 @@ body {
 .header-logo {
   display: flex;
   justify-content: center;
+  height: 60px;
 }
+
+/*CONTENT*/
 
 .main {
   margin: auto;
@@ -91,6 +94,8 @@ body {
   display: flex;
   gap: 20px;
 }
+
+/*MAIN FORM*/
 
 .avia-form {
   width: 725px;
@@ -112,9 +117,15 @@ body {
   color: green;
 }
 
+.datepicker-input {
+  padding-left: 15px;
+}
+
 ::placeholder {
   padding-left: 15px;
 }
+
+/**/
 
 hr {
   width: 725px;
@@ -122,6 +133,8 @@ hr {
   transform: rotate(-0.08deg);
   margin-bottom: 25px;
 }
+
+/*OPTIONS*/
 
 .extra {
   background-color: white;
