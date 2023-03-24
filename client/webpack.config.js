@@ -1,3 +1,5 @@
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+
 const path = require("path")
 
 module.exports = {
@@ -7,6 +9,7 @@ module.exports = {
     path: path.resolve(__dirname, "build"),
     filename: "bundled.js"
   },
+  plugins: [new HtmlWebpackPlugin({ template: "./app/index.html" })],
   mode: "development",
   devtool: "source-map",
   devServer: {
