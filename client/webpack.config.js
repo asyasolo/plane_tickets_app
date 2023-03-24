@@ -1,11 +1,15 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin")
 
 const path = require("path")
 
-module.exports = {
+const currentTask = process.env.npm_lifecycle_event
+
+const config = {
   entry: "./app/Main.js",
   output: {
-    publicPath: "/",
     path: path.resolve(__dirname, "build"),
     filename: "bundled.js"
   },
@@ -32,7 +36,20 @@ module.exports = {
             presets: ["@babel/preset-react", ["@babel/preset-env", { targets: { node: "12" } }]]
           }
         }
+      },
+
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"]
       }
     ]
   }
 }
+
+if (currentTask == "build" || currentTask == "deploy") {
+  config.mode = "production"
+  config.module.rules[1].use[0] = MiniCssExtractPlugin.loader
+  config.plugins.push(new MiniCssExtractPlugin({ filename: "main.css" }), new CleanWebpackPlugin())
+}
+
+module.exports = config
