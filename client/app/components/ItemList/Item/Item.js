@@ -1,6 +1,8 @@
 import React, { useEffect } from "react"
 
-function FlightRecord() {
+import "./Item.css"
+
+function Item() {
   return (
     <div className="flight-item">
       <div className="fligth-item-header">
@@ -28,4 +30,4 @@ function FlightRecord() {
   )
 }
 
-export default FlightRecord
+export default Item

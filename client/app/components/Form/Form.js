@@ -1,6 +1,8 @@
 import React, { useEffect, useRef } from "react"
 
-function DestinationPanel() {
+import "./Form.css"
+
+function Form() {
   const ref1 = useRef()
   const ref2 = useRef()
 
@@ -16,4 +18,4 @@ function DestinationPanel() {
   )
 }
 
-export default DestinationPanel
+export default Form

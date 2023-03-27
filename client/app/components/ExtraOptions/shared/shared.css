@@ -1,0 +1,23 @@
+.extra {
+  background-color: white;
+  box-shadow: var(--block-shadow);
+  border-radius: var(--block-radius);
+  padding: 20px 0;
+  margin-bottom: 20px;
+}
+
+legend {
+  padding: 0 20px 5px 20px;
+}
+
+.input-group {
+  padding: 5px 20px;
+}
+
+.input-group:hover {
+  background-color: var(--highlight-color);
+}
+
+label {
+  padding-left: 10px;
+}

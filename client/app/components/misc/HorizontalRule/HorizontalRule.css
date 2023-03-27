@@ -1,0 +1,6 @@
+hr {
+  width: 725px;
+  border: 1px solid var(--primary-shadow);
+  transform: rotate(-0.08deg);
+  margin-bottom: 25px;
+}

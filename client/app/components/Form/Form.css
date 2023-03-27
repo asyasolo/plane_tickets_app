@@ -1,0 +1,32 @@
+.avia-form {
+  width: 725px;
+  height: 60px;
+  display: flex;
+  margin-bottom: 25px;
+  gap: 2px;
+}
+
+.avia-form-input {
+  background: #ffffff;
+  border-radius: 5px 5px 5px 5px;
+  flex: 1;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.avia-form-input:focus {
+  outline: 1px solid var(--primary-red);
+  color: green;
+}
+
+::placeholder {
+  padding-left: 15px;
+}
+
+.datepicker-input {
+  padding-left: 15px;
+}
+
+.datepicker-input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  padding-right: 15px;
+}

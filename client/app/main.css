@@ -73,12 +73,12 @@ p {
 body {
   background-color: var(--background-color);
 }
-
+/*
 .header-logo {
   display: flex;
   justify-content: center;
   height: 60px;
-}
+} */
 
 /*CONTENT*/
 
@@ -97,6 +97,7 @@ body {
 
 /*MAIN FORM*/
 
+/*
 .avia-form {
   width: 725px;
   height: 60px;
@@ -129,6 +130,7 @@ body {
   cursor: pointer;
   padding-right: 15px;
 }
+*/
 
 /**/
 
@@ -141,7 +143,7 @@ hr {
 
 /*OPTIONS*/
 
-.extra {
+/*.extra {
   background-color: white;
   box-shadow: var(--block-shadow);
   border-radius: var(--block-radius);
@@ -163,10 +165,11 @@ legend {
 
 label {
   padding-left: 10px;
-}
+}*/
 
 /*BUTTONS*/
 
+/*
 .button-group {
   margin-bottom: 20px;
   display: flex;
@@ -187,6 +190,7 @@ label {
   background-color: var(--primary-blue);
   color: white;
 }
+*/
 
 .browse_btn {
   background-color: var(--primary-blue);
@@ -199,7 +203,7 @@ label {
 
 /*FLIGHTS*/
 
-.flight-item {
+/*.flight-item {
   height: 135px;
   width: 502px;
   background-color: #fff;
@@ -226,4 +230,4 @@ label {
 
 .gray {
   color: var(--gray-text-color);
-}
+}*/

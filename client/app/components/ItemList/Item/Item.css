@@ -1,0 +1,28 @@
+.flight-item {
+  height: 135px;
+  width: 502px;
+  background-color: #fff;
+  border-radius: var(--block-radius);
+  box-shadow: var(--block-shadow);
+  margin-bottom: 20px;
+}
+
+.flight-item:hover {
+  background-color: var(--highlight-color);
+}
+
+.fligth-item-header {
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.flight-item-body {
+  display: flex;
+  padding: 5px 20px;
+  justify-content: space-between;
+}
+
+.gray {
+  color: var(--gray-text-color);
+}

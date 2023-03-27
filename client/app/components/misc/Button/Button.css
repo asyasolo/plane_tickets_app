@@ -1,0 +1,24 @@
+.browse_btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  width: 502px;
+  height: 50px;
+}
+
+.select-btn {
+  background-color: white;
+  border: 1px solid #dfe5ec;
+  padding: 15px;
+  flex: 1;
+}
+
+.select-btn:hover {
+  background-color: var(--highlight-color);
+}
+
+.select-btn:active {
+  background-color: var(--primary-blue);
+  color: white;
+}
