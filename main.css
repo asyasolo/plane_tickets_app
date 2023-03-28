@@ -126,6 +126,7 @@ label {
   border-radius: 5px;
   width: 502px;
   height: 50px;
+  padding-bottom: 10px;
 }
 
 .select-btn {
@@ -205,6 +206,10 @@ label {
   display: flex;
   padding: 5px 20px;
   justify-content: space-between;
+}
+
+.flight-item-group {
+  text-align: left;
 }
 
 .gray {
