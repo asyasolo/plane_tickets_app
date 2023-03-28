@@ -2,11 +2,11 @@ import React, { useEffect } from "react"
 
 import "./Item.css"
 
-function Item() {
+function Item(props) {
   return (
     <div className="flight-item">
       <div className="fligth-item-header">
-        <h1>13 000</h1>
+        <h1>{props.price}</h1>
         <img src="./img/S7_logo.png" alt="" className="flight-logo" />
       </div>
 
