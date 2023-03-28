@@ -23,6 +23,10 @@
   justify-content: space-between;
 }
 
+.flight-item-group {
+  text-align: left;
+}
+
 .gray {
   color: var(--gray-text-color);
 }
