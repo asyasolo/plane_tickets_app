@@ -126,7 +126,7 @@ label {
   border-radius: 5px;
   width: 502px;
   height: 50px;
-  padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .select-btn {
