@@ -65,10 +65,10 @@ function Item(props) {
       <div className="flight-item-body">
         <div className="flight-item-group">
           <p className="flight-item-city gray">
-            {props.info.origin} - {props.info.destination}
+            {props.info.origin} — {props.info.destination}
           </p>
           <h3 className="flight-item-time">
-            {convertUnixTimeToDateTime(props.info.dateStart)} - {convertUnixTimeToDateTime(props.info.dateEnd)}
+            {convertUnixTimeToDateTime(props.info.dateStart)} — {convertUnixTimeToDateTime(props.info.dateEnd)}
           </h3>
         </div>
 
