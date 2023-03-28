@@ -216,5 +216,11 @@ label {
   color: var(--gray-text-color);
 }
 
+.header-logo {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+
 
 /*# sourceMappingURL=main.css.map*/
