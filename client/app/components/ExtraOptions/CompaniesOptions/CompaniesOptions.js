@@ -12,16 +12,16 @@ function CompaniesOptions() {
 
         <div className="input-group">
           <input type="radio" id="company_all" name="company" value="company_all" />
-          <label for="company_all">Все</label>
+          <label htmlFor="company_all">Все</label>
         </div>
 
         <div className="input-group">
           <input type="radio" id="company_s_seven" name="company" value="s_seven" />
-          <label for="company_s_seven">S7 Airlines</label>
+          <label htmlFor="company_s_seven">S7 Airlines</label>
         </div>
         <div className="input-group">
           <input type="radio" id="company_xiamenAir" name="company" value="xiamenAir" />
-          <label for="company_xiamenAir">XiamenAir</label>
+          <label htmlFor="company_xiamenAir">XiamenAir</label>
         </div>
       </form>
     </div>
