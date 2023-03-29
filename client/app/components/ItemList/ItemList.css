@@ -1,0 +1,9 @@
+.browse_btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  width: 502px;
+  height: 50px;
+  margin-bottom: 10px;
+}
