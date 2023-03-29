@@ -183,6 +183,16 @@ label {
   padding-right: 15px;
 }
 
+.browse_btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  width: 502px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
 .flight-item {
   height: 135px;
   width: 502px;
@@ -214,6 +224,13 @@ label {
 
 .gray {
   color: var(--gray-text-color);
+}
+
+hr {
+  width: 725px;
+  border: 1px solid var(--primary-shadow);
+  transform: rotate(-0.08deg);
+  margin-bottom: 25px;
 }
 
 .header-logo {
