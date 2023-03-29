@@ -1,21 +1,29 @@
 .avia-form {
-  width: 725px;
+  max-width: 720px;
   height: 60px;
-  display: flex;
-  margin-bottom: 25px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  margin-bottom: 20px;
   gap: 2px;
 }
 
 .avia-form-input {
   background: #ffffff;
   border-radius: 5px 5px 5px 5px;
-  flex: 1;
   border: 1px solid rgba(0, 0, 0, 0.1);
+  width: auto;
+  /*padding-left: 15px;*/
 }
 
 .avia-form-input:focus {
   outline: 1px solid var(--primary-red);
-  color: green;
+}
+
+.avia-form-button {
+  display: inline-block;
+  width: auto;
+  min-width: 80px;
 }
 
 ::placeholder {

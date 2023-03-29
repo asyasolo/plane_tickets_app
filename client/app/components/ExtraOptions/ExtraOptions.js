@@ -5,11 +5,11 @@ import "./ExtraOptions.css"
 import StopsOptions from "./StopsOptions/StopsOptions"
 import CompaniesOptions from "./CompaniesOptions/CompaniesOptions"
 
-function ExtraOptions() {
+function ExtraOptions({ filters, onFilterChange, onCompanyChange }) {
   return (
     <div className="menu-group">
-      <StopsOptions />
-      <CompaniesOptions />
+      <StopsOptions filters={filters} onFilterChange={onFilterChange} />
+      <CompaniesOptions filters={filters} onCompanyChange={onCompanyChange} />
     </div>
   )
 }

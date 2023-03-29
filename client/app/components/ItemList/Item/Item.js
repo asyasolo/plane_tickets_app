@@ -29,6 +29,9 @@ function Item(props) {
       case 2:
         return "Две пересадки"
         break
+      case 3:
+        return "Три пересадки"
+        break
       default:
         return "Без пересадок"
         break
