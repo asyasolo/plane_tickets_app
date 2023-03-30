@@ -8,6 +8,7 @@ import Form from "./Form/Form"
 import ItemList from "./ItemList/ItemList"
 import HorizontalRule from "./misc/HorizontalRule/HorizontalRule"
 import Header from "./Header/Header"
+import api from "../utils/api"
 
 const initialFilters = {
   origin: "",
@@ -21,6 +22,11 @@ const initialFilters = {
 
 function App() {
   const [filters, setFilters] = useState(initialFilters)
+  const [response, setResponse] = useState([])
+
+  const handleResponseChange = newResponse => {
+    setResponse(newResponse)
+  }
 
   const handleFilterChange = event => {
     const { name, value, type } = event.target
@@ -45,23 +51,32 @@ function App() {
     setFilters(updatedFilters)
   }
 
-  const handleFormSubmit = event => {
+  const handleFormSubmit = async event => {
     event.preventDefault()
     // вызов функции API с передачей параметров фильтрации
     console.log(filters)
+
+    try {
+      const ticketResponse = await api.fetchTickets(filters)
+      if (ticketResponse) {
+        handleResponseChange(ticketResponse)
+      }
+    } catch (error) {
+      console.log(error)
+    }
   }
 
   return (
     <>
       <Header />
       <div className="main">
-        <Form filters={filters} onFilterChange={handleFilterChange} onSubmit={handleFormSubmit} />
+        <Form filters={filters} onFilterChange={handleFilterChange} onSubmit={handleFormSubmit} onResponseChange={handleResponseChange} />
         <HorizontalRule />
         <div className="main-group">
           <ExtraOptions filters={filters} onFilterChange={handleFilterChange} onCompanyChange={handleCompanyChange} />
           <div className="flight-group">
             <ButtonCluster />
-            <ItemList />
+            <ItemList response={response} />
           </div>
         </div>
       </div>

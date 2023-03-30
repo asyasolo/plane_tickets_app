@@ -4,7 +4,7 @@ import "./ItemList.css"
 import Item from "./Item/Item"
 import api from "../../utils/api"
 
-function ItemList() {
+function ItemList({ response }) {
   const [tickets, setTickets] = useState([])
   const [visibleTickets, setVisibleTickets] = useState(3)
 
@@ -26,6 +26,21 @@ function ItemList() {
 
     fetchData()
   }, [])
+
+  useEffect(() => {
+    console.log("fetching kinda")
+    const fetchData = async () => {
+      try {
+        const ticketResponse = response ? response : "Ой, ничего не найдено" /*await api.fetchTickets()*/
+        if (ticketResponse) {
+          setTickets(ticketResponse)
+        }
+      } catch (error) {
+        console.log(error)
+      }
+    }
+    fetchData()
+  }, [response])
 
   return (
     <div>

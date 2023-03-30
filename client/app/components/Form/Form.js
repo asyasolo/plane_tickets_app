@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react"
 
 import "./Form.css"
 
-function Form({ filters, onFilterChange, onSubmit }) {
+function Form({ filters, onFilterChange, onSubmit, onResponseChange }) {
   const ref1 = useRef()
   const ref2 = useRef()
 
