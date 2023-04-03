@@ -24,16 +24,16 @@ function Item(props) {
   function countStops(arr) {
     switch (arr.length) {
       case 1:
-        return "Одна пересадка"
+        return "ОДНА ПЕРЕСАДКА"
         break
       case 2:
-        return "Две пересадки"
+        return "ДВЕ ПЕРЕСАДКИ"
         break
       case 3:
-        return "Три пересадки"
+        return "ТРИ ПЕРЕСАДКИ"
         break
       default:
-        return "Без пересадок"
+        return "БЕЗ ПЕРЕСАДОК"
         break
     }
   }
