@@ -144,6 +144,9 @@ label {
   width: 20px;
   margin: 0;
   border: 2px solid #9abbce;
+  cursor: pointer;
+  -webkit-appearance: none; /* для Safari и Chrome */
+  -moz-appearance: none; /* для Firefox */
   appearance: none;
   border-radius: 50%;
   position: relative;
@@ -188,7 +191,7 @@ label {
   display: inline-block;
   position: relative;
   left: 6px;
-  top: 1px;
+  top: -1px;
   width: 6px;
   height: 10px;
   border: solid var(--primary-blue);
