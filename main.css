@@ -1,6 +1,8 @@
+*,
 ::after,
 ::before {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 :root {
   /*COLOURS*/
@@ -10,6 +12,7 @@
   --primary-shadow: #dadada;
   --highlight-color: #f1fcff;
   --gray-text-color: #a0b0b9;
+  --primary-text-color: #4a4a4a;
 
   /*TYPOGRAPHY*/
   /*h1*/
@@ -39,6 +42,7 @@ body {
   font-kerning: normal;
   background-color: var(--background-color);
   overflow-y: scroll;
+  color: var(--primary-text-color);
 }
 
 h1,
@@ -54,9 +58,13 @@ h1 {
   color: var(--primary-blue);
 }
 h2,
-::placeholder {
+::placeholder,
+input[type="text"],
+input[type="date"] {
   font-size: var(--medium-font);
   font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--primary-text-color);
 }
 h3 {
   font-size: var(--small-font);
@@ -204,6 +212,22 @@ label {
   padding: 15px;
   flex: 1;
   border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.select-btn:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.select-btn:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.middle-btn {
+  border-radius: 0;
 }
 
 .select-btn:hover {
@@ -213,6 +237,7 @@ label {
 .select-btn:active {
   background-color: var(--primary-blue);
   color: white;
+  border: none;
 }
 
 .button-group {
@@ -227,15 +252,28 @@ label {
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto;
   margin-bottom: 20px;
-  gap: 4px;
+  gap: 2px;
 }
 
 .avia-form-input {
   background: #ffffff;
-  border-radius: 5px 5px 5px 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: auto;
   min-width: 144px;
+  padding-left: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avia-form-input:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#dateEnd {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.middle-input {
+  border-radius: 0;
 }
 
 .avia-form-input:focus {
@@ -248,10 +286,6 @@ label {
   border: none;
   background-color: var(--primary-blue);
   color: #ffffff;
-}
-
-.spec-placeholder::placeholder {
-  padding-left: 15px;
 }
 
 .datepicker-input {
@@ -307,6 +341,7 @@ label {
 
 .gray {
   color: var(--gray-text-color);
+  letter-spacing: 0.5px;
 }
 
 hr {
