@@ -38,6 +38,7 @@ body {
   height: 100vh;
   font-kerning: normal;
   background-color: var(--background-color);
+  overflow-y: scroll;
 }
 
 h1,
@@ -70,6 +71,11 @@ p {
   font-size: var(--tiny-font);
 }
 
+::placeholder,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+
 .main {
   margin: auto;
   max-width: 960px;
@@ -81,4 +87,8 @@ p {
 .main-group {
   display: flex;
   gap: 20px;
+}
+
+.flight-group {
+  width: 503px;
 }
