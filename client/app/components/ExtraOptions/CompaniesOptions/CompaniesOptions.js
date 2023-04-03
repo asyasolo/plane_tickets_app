@@ -11,18 +11,18 @@ function CompaniesOptions({ filters, onCompanyChange }) {
         </legend>
 
         <div className="input-group">
-          <input onChange={onCompanyChange} type="radio" id="company_all" name="company" value="all" />
+          <input className="radio-btn" onChange={onCompanyChange} type="radio" id="company_all" name="company" value="all" />
           <label htmlFor="company_all">Все</label>
         </div>
 
         <div className="input-group">
           {/*изменить value*/}
-          <input onChange={onCompanyChange} type="radio" id="company_s_seven" name="company" value="cddfa038-823b-43b1-b18d-395731881077" />
+          <input className="radio-btn" onChange={onCompanyChange} type="radio" id="company_s_seven" name="company" value="cddfa038-823b-43b1-b18d-395731881077" />
           <label htmlFor="company_s_seven">S7 Airlines</label>
         </div>
         <div className="input-group">
           {/*изменить value*/}
-          <input onChange={onCompanyChange} type="radio" id="company_xiamenAir" name="company" value="7dc12d0b-ce42-48a0-8673-0dad4d698764" />
+          <input className="radio-btn" onChange={onCompanyChange} type="radio" id="company_xiamenAir" name="company" value="7dc12d0b-ce42-48a0-8673-0dad4d698764" />
           <label htmlFor="company_xiamenAir">XiamenAir</label>
         </div>
       </form>

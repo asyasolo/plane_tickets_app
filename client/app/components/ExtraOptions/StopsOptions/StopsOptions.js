@@ -11,22 +11,22 @@ function StopsOptions({ filters, onFilterChange }) {
         </legend>
 
         <div className="input-group">
-          <input type="checkbox" name="numStops" value="0" id="no_transfer" onChange={onFilterChange} />
+          <input className="checkbox-btn" type="checkbox" name="numStops" value="0" id="no_transfer" onChange={onFilterChange} />
           <label htmlFor="no_transfer">Без пересадок</label>
         </div>
 
         <div className="input-group">
-          <input type="checkbox" id="transfer_one" name="numStops" value="1" onChange={onFilterChange} />
+          <input className="checkbox-btn" type="checkbox" id="transfer_one" name="numStops" value="1" onChange={onFilterChange} />
           <label htmlFor="transfer_one">Одна пересадка</label>
         </div>
 
         <div className="input-group">
-          <input type="checkbox" id="transfer_two" name="numStops" value="2" onChange={onFilterChange} />
+          <input className="checkbox-btn" type="checkbox" id="transfer_two" name="numStops" value="2" onChange={onFilterChange} />
           <label htmlFor="transfer_two">Две пересадки</label>
         </div>
 
         <div className="input-group">
-          <input type="checkbox" id="transfer_three" name="numStops" value="3" onChange={onFilterChange} />
+          <input className="checkbox-btn" type="checkbox" id="transfer_three" name="numStops" value="3" onChange={onFilterChange} />
           <label htmlFor="transfer_three">Три пересадки</label>
         </div>
       </form>

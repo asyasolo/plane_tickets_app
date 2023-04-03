@@ -12,6 +12,8 @@ legend {
 
 .input-group {
   padding: 5px 20px;
+  display: flex;
+  align-items: center;
 }
 
 .input-group:hover {
@@ -20,4 +22,42 @@ legend {
 
 label {
   padding-left: 10px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.radio-btn {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  background-color: var(--primary-blue);
+}
+
+.checkbox-btn {
+  cursor: pointer;
+  -webkit-appearance: none; /* для Safari и Chrome */
+  -moz-appearance: none; /* для Firefox */
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+.checkbox-btn:checked {
+  border-color: var(--primary-blue);
+  background-color: #fff;
+}
+:checked::before {
+  content: "";
+  display: inline-block;
+  position: relative;
+  left: 4px;
+  top: 0px;
+  width: 10px;
+  height: 10px;
+  border: solid var(--primary-blue);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }

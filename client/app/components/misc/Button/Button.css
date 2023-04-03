@@ -13,6 +13,7 @@
   border: 1px solid #dfe5ec;
   padding: 15px;
   flex: 1;
+  border-radius: 5px;
 }
 
 .select-btn:hover {
