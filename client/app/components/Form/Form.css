@@ -4,15 +4,28 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr) auto;
   margin-bottom: 20px;
-  gap: 4px;
+  gap: 2px;
 }
 
 .avia-form-input {
   background: #ffffff;
-  border-radius: 5px 5px 5px 5px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: auto;
   min-width: 144px;
+  padding-left: 15px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avia-form-input:first-child {
+  border-radius: 5px 0px 0px 5px;
+}
+
+#dateEnd {
+  border-radius: 0px 5px 5px 0px;
+}
+
+.middle-input {
+  border-radius: 0;
 }
 
 .avia-form-input:focus {
@@ -25,10 +38,6 @@
   border: none;
   background-color: var(--primary-blue);
   color: #ffffff;
-}
-
-.spec-placeholder::placeholder {
-  padding-left: 15px;
 }
 
 .datepicker-input {

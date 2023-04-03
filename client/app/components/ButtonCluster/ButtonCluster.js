@@ -8,7 +8,7 @@ function ButtonCluster() {
   return (
     <div className="button-group">
       <Button className="select-btn" text="САМЫЙ ДЕШЕВЫЙ" />
-      <Button className="select-btn" text="САМЫЙ БЫСТРЫЙ" />
+      <Button className="select-btn middle-btn" text="САМЫЙ БЫСТРЫЙ" />
       <Button className="select-btn" text="ОПТИМАЛЬНЫЙ" />
     </div>
   )

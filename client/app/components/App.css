@@ -1,6 +1,8 @@
+*,
 ::after,
 ::before {
   box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
 }
 :root {
   /*COLOURS*/
@@ -10,6 +12,7 @@
   --primary-shadow: #dadada;
   --highlight-color: #f1fcff;
   --gray-text-color: #a0b0b9;
+  --primary-text-color: #4a4a4a;
 
   /*TYPOGRAPHY*/
   /*h1*/
@@ -39,6 +42,7 @@ body {
   font-kerning: normal;
   background-color: var(--background-color);
   overflow-y: scroll;
+  color: var(--primary-text-color);
 }
 
 h1,
@@ -54,9 +58,13 @@ h1 {
   color: var(--primary-blue);
 }
 h2,
-::placeholder {
+::placeholder,
+input[type="text"],
+input[type="date"] {
   font-size: var(--medium-font);
   font-weight: 400;
+  letter-spacing: 0.5px;
+  color: var(--primary-text-color);
 }
 h3 {
   font-size: var(--small-font);
