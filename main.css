@@ -211,6 +211,7 @@ label {
 
 .select-btn {
   background-color: white;
+  color: var(--primary-text-color);
   border: 1px solid #dfe5ec;
   padding: 15px;
   flex: 1;
