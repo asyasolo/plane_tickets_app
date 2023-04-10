@@ -13,6 +13,18 @@
   margin-bottom: 10px;
 }
 
+.active-btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 15px;
+  flex: 1;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
 .select-btn {
   background-color: white;
   color: var(--primary-text-color);
@@ -26,11 +38,11 @@
   letter-spacing: 0.5px;
 }
 
-.select-btn:first-child {
+.left-btn {
   border-radius: 5px 0 0 5px;
 }
 
-.select-btn:last-child {
+.right-btn {
   border-radius: 0 5px 5px 0;
 }
 
@@ -38,9 +50,9 @@
   border-radius: 0;
 }
 
-.select-btn:hover {
+/*.select-btn:hover {
   background-color: var(--highlight-color);
-}
+}*/
 
 .select-btn:active {
   background-color: var(--primary-blue);
