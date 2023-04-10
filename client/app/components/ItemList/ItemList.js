@@ -33,30 +33,7 @@ function ItemList({ response }) {
 
   return (
     <div>
-      {tickets.length === 0 && (
-        <div className="flight-item">
-          <div className="fligth-item-header">
-            <h1>13 400</h1>
-            <img src={`./img/S7 Logo.png`} alt="" className="flight-logo" />
-          </div>
-
-          <div className="flight-item-body">
-            <div className="flight-item-group">
-              <p className="flight-item-city gray">MOW — HKT</p>
-              <h3 className="flight-item-time">10:45 — 8:00</h3>
-            </div>
-
-            <div className="flight-item-group">
-              <p className="gray">В ПУТИ</p>
-              <h3 className="flight-item-time">21 ч 45 мин</h3>
-            </div>
-
-            <div className="flight-item-group">
-              <p className="gray">Без остановок</p>
-            </div>
-          </div>
-        </div>
-      )}
+      {tickets.length === 0 && <h1>Загрузка</h1>}
 
       {tickets.slice(0, visibleTickets).map((item, index) => {
         if (index < visibleTickets) {
