@@ -301,6 +301,19 @@ label {
   padding-right: 15px;
 }
 
+hr {
+  width: 725px;
+  border: 1px solid var(--primary-shadow);
+  transform: rotate(-0.08deg);
+  margin-bottom: 25px;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+
 .browse_btn {
   background-color: var(--primary-blue);
   color: white;
@@ -346,19 +359,6 @@ label {
 .gray {
   color: var(--gray-text-color);
   letter-spacing: 0.5px;
-}
-
-hr {
-  width: 725px;
-  border: 1px solid var(--primary-shadow);
-  transform: rotate(-0.08deg);
-  margin-bottom: 25px;
-}
-
-.header-logo {
-  display: flex;
-  justify-content: center;
-  height: 60px;
 }
 
 
