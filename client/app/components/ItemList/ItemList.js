@@ -4,7 +4,7 @@ import "./ItemList.css"
 import Item from "./Item/Item"
 import api from "../../utils/api"
 
-function ItemList({ response }) {
+function ItemList({ response, sorting }) {
   const [tickets, setTickets] = useState([])
   const [visibleTickets, setVisibleTickets] = useState(2)
 
@@ -30,6 +30,23 @@ function ItemList({ response }) {
   useEffect(() => {
     setTickets(response)
   }, [response])
+
+  useEffect(() => {
+    if (sorting == "fastest") {
+      const sortedData = tickets.sort((a, b) => a.info.duration - b.info.duration)
+      setTickets(sortedData)
+    } else if (sorting == "cheapest") {
+      const sortedData = tickets.sort((a, b) => a.price - b.price)
+      setTickets(sortedData)
+    } else if (sorting == "optimal") {
+      const sortedData = tickets.sort((a, b) => {
+        const aRatio = a.price / a.info.duration
+        const bRatio = b.price / b.info.duration
+        return aRatio - bRatio
+      })
+      setTickets(sortedData)
+    }
+  }, [tickets, sorting])
 
   return (
     <div>

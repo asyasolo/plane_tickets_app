@@ -22,10 +22,16 @@ const initialFilters = {
 
 function App() {
   const [filters, setFilters] = useState(initialFilters)
+  const [sorting, setSorting] = useState("")
   const [response, setResponse] = useState([])
 
   const handleResponseChange = newResponse => {
     setResponse(newResponse)
+  }
+
+  const handleSortChange = newSorting => {
+    setSorting(newSorting)
+    console.log(sorting)
   }
 
   const handleFilterChange = event => {
@@ -71,8 +77,8 @@ function App() {
         <div className="main-group">
           <ExtraOptions filters={filters} onFilterChange={handleFilterChange} onCompanyChange={handleCompanyChange} />
           <div className="flight-group">
-            <ButtonCluster />
-            <Filters filters={filters} />
+            <ButtonCluster onSortChange={handleSortChange} />
+            <Filters filters={filters} sorting={sorting} />
           </div>
         </div>
       </div>

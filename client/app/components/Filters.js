@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react"
 import api from "../utils/api"
 import ItemList from "./ItemList/ItemList"
 
-function Filters({ filters }) {
+function Filters({ filters, sorting }) {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
 
@@ -52,7 +52,7 @@ function Filters({ filters }) {
     )
   }, [filters])
 
-  return <ItemList response={filteredData} />
+  return <ItemList response={filteredData} sorting={sorting} />
 }
 
 export default Filters

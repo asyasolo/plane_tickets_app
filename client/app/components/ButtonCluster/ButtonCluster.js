@@ -4,12 +4,30 @@ import Button from "../misc/Button/Button"
 
 import "./ButtonCluster.css"
 
-function ButtonCluster() {
+function ButtonCluster({ onSortChange }) {
+  const handleFastestClick = () => {
+    onSortChange("fastest")
+  }
+
+  const handleCheapestClick = () => {
+    onSortChange("cheapest")
+  }
+
+  const handleOptimalClick = () => {
+    onSortChange("optimal")
+  }
+
   return (
     <div className="button-group">
-      <Button className="select-btn" text="САМЫЙ ДЕШЕВЫЙ" />
-      <Button className="select-btn middle-btn" text="САМЫЙ БЫСТРЫЙ" />
-      <Button className="select-btn" text="ОПТИМАЛЬНЫЙ" />
+      <button className="select-btn" onClick={handleCheapestClick}>
+        САМЫЙ ДЕШЕВЫЙ
+      </button>
+      <button className="select-btn middle-btn" onClick={handleFastestClick}>
+        САМЫЙ БЫСТРЫЙ
+      </button>
+      <button className="select-btn" onClick={handleOptimalClick}>
+        ОПТИМАЛЬНЫЙ
+      </button>
     </div>
   )
 }
