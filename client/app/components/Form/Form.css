@@ -42,6 +42,11 @@
 
 .datepicker-input {
   padding-left: 15px;
+  vertical-align: middle;
+}
+
+input[type="date"] {
+  padding-top: 18px;
 }
 
 .datepicker-input::-webkit-calendar-picker-indicator {
