@@ -249,6 +249,50 @@ label {
   display: flex;
   width: 503px;
 }
+.browse_btn {
+  background-color: var(--primary-blue);
+  color: white;
+  border: 1px solid #dfe5ec;
+  border-radius: 5px;
+  width: 502px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.select-btn {
+  background-color: white;
+  color: var(--primary-text-color);
+  border: 1px solid #dfe5ec;
+  padding: 15px;
+  flex: 1;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 0.5px;
+}
+
+.select-btn:first-child {
+  border-radius: 5px 0 0 5px;
+}
+
+.select-btn:last-child {
+  border-radius: 0 5px 5px 0;
+}
+
+.middle-btn {
+  border-radius: 0;
+}
+
+.select-btn:hover {
+  background-color: var(--highlight-color);
+}
+
+.select-btn:active {
+  background-color: var(--primary-blue);
+  color: white;
+  border: none;
+}
 
 .avia-form {
   max-width: 720px;
