@@ -50,11 +50,6 @@ function Filters({ filters }) {
         return true
       })
     )
-    const numStopsParsed = filters.numStops.map(item => Number(item))
-    console.log(numStopsParsed)
-    /*
-    console.log(filters)
-    console.log(filteredData)*/
   }, [filters])
 
   return <ItemList response={filteredData} />
