@@ -24,10 +24,8 @@ function Filters({ filters }) {
   useEffect(() => {
     setFilteredData(
       data.filter(item => {
-        if (filters.origin) {
-          if (filters.origin && item.info.origin !== filters.origin) {
-            return false
-          }
+        if (filters.origin && item.info.origin !== filters.origin) {
+          return false
         }
         if (filters.destination && item.info.destination !== filters.destination) {
           return false
@@ -38,9 +36,25 @@ function Filters({ filters }) {
         if (filters.dateEnd && new Date(item.info.date) > new Date(filters.dateEnd)) {
           return false
         }
+        if (filters.companyId && filters.companyId !== "all") {
+          if (item.companyId !== filters.companyId) {
+            return false
+          }
+        }
+
+        if (filters.numStops && filters.numStops.length > 0) {
+          const numStopsParsed = filters.numStops.map(item => Number(item))
+          if (!numStopsParsed.includes(item.info.stops.length)) return false
+        }
+
         return true
       })
     )
+    const numStopsParsed = filters.numStops.map(item => Number(item))
+    console.log(numStopsParsed)
+    /*
+    console.log(filters)
+    console.log(filteredData)*/
   }, [filters])
 
   return <ItemList response={filteredData} />

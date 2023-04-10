@@ -5,7 +5,6 @@ import "./App.css"
 import ExtraOptions from "./ExtraOptions/ExtraOptions"
 import ButtonCluster from "./ButtonCluster/ButtonCluster"
 import Form from "./Form/Form"
-import ItemList from "./ItemList/ItemList"
 import HorizontalRule from "./misc/HorizontalRule/HorizontalRule"
 import Header from "./Header/Header"
 import api from "../utils/api"
@@ -34,21 +33,17 @@ function App() {
     const updatedFilters = { ...filters }
 
     if (type === "checkbox") {
-      if (event.target.checked) {
-        updatedFilters.numStops.push(value)
-      } else {
-        updatedFilters.numStops = updatedFilters.numStops.filter(stop => stop !== value)
-      }
+      updatedFilters.numStops = event.target.checked ? [...updatedFilters.numStops, value] : updatedFilters.numStops.filter(stop => stop !== value)
     } else {
       updatedFilters[name] = value
     }
-
     setFilters(updatedFilters)
   }
 
   const handleCompanyChange = event => {
     const updatedFilters = { ...filters }
     updatedFilters.companyId = event.target.value
+    console.log(updatedFilters)
     setFilters(updatedFilters)
   }
 
