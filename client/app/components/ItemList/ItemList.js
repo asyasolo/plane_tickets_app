@@ -13,6 +13,7 @@ function ItemList({ response }) {
   }
 
   useEffect(() => {
+    console.log("fetching first")
     const fetchData = async () => {
       try {
         const ticketResponse = await api.fetchTickets()
@@ -23,23 +24,11 @@ function ItemList({ response }) {
         console.log(error)
       }
     }
-
     fetchData()
   }, [])
 
   useEffect(() => {
-    console.log("fetching kinda")
-    const fetchData = async () => {
-      try {
-        const ticketResponse = response ? response : "Ой, ничего не найдено" /*await api.fetchTickets()*/
-        if (ticketResponse) {
-          setTickets(ticketResponse)
-        }
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData()
+    setTickets(response)
   }, [response])
 
   return (

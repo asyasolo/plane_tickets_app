@@ -9,6 +9,7 @@ import ItemList from "./ItemList/ItemList"
 import HorizontalRule from "./misc/HorizontalRule/HorizontalRule"
 import Header from "./Header/Header"
 import api from "../utils/api"
+import Filters from "./Filters"
 
 const initialFilters = {
   origin: "",
@@ -76,7 +77,7 @@ function App() {
           <ExtraOptions filters={filters} onFilterChange={handleFilterChange} onCompanyChange={handleCompanyChange} />
           <div className="flight-group">
             <ButtonCluster />
-            <ItemList response={response} />
+            <Filters filters={filters} />
           </div>
         </div>
       </div>
