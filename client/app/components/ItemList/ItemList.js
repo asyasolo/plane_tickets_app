@@ -42,7 +42,9 @@ function ItemList({ response, sorting }) {
       const sortedData = tickets.sort((a, b) => {
         const aRatio = a.price / a.info.duration
         const bRatio = b.price / b.info.duration
-        return aRatio - bRatio
+        if (a.price == b.price && a.info.duration > b.info.duration) {
+          return bRatio - aRatio
+        } else return aRatio - bRatio
       })
       setTickets(sortedData)
     }
