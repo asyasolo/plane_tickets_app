@@ -7,7 +7,6 @@ import ButtonCluster from "./ButtonCluster/ButtonCluster"
 import Form from "./Form/Form"
 import HorizontalRule from "./misc/HorizontalRule/HorizontalRule"
 import Header from "./Header/Header"
-import api from "../utils/api"
 import Filters from "./Filters"
 
 const initialFilters = {
@@ -16,18 +15,12 @@ const initialFilters = {
   dateStart: "",
   dateEnd: "",
   numStops: [],
-  /* CHANGE TO companyName */
   companyId: "all"
 }
 
 function App() {
   const [filters, setFilters] = useState(initialFilters)
   const [sorting, setSorting] = useState("")
-  const [response, setResponse] = useState([])
-
-  const handleResponseChange = newResponse => {
-    setResponse(newResponse)
-  }
 
   const handleSortChange = newSorting => {
     setSorting(newSorting)
@@ -53,26 +46,11 @@ function App() {
     setFilters(updatedFilters)
   }
 
-  const handleFormSubmit = async event => {
-    event.preventDefault()
-    // вызов функции API с передачей параметров фильтрации
-    console.log(filters)
-
-    try {
-      const ticketResponse = await api.fetchTickets(filters)
-      if (ticketResponse) {
-        handleResponseChange(ticketResponse)
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
   return (
     <>
       <Header />
       <div className="main">
-        <Form filters={filters} onFilterChange={handleFilterChange} onSubmit={handleFormSubmit} onResponseChange={handleResponseChange} />
+        <Form filters={filters} onFilterChange={handleFilterChange} />
         <HorizontalRule />
         <div className="main-group">
           <ExtraOptions filters={filters} onFilterChange={handleFilterChange} onCompanyChange={handleCompanyChange} />

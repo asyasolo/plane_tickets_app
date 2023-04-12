@@ -6,7 +6,7 @@ import api from "../../utils/api"
 
 function ItemList({ response, sorting }) {
   const [tickets, setTickets] = useState([])
-  const [visibleTickets, setVisibleTickets] = useState(2)
+  const [visibleTickets, setVisibleTickets] = useState(3)
 
   const handleShowMore = () => {
     setVisibleTickets(prevVisibleTickets => prevVisibleTickets + 5)

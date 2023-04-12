@@ -7,7 +7,6 @@ function Filters({ filters, sorting }) {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
 
-  // получили данные с api
   const fetchData = async () => {
     try {
       const response = await api.fetchTickets()
@@ -20,7 +19,6 @@ function Filters({ filters, sorting }) {
   }
   fetchData()
 
-  // отфильтровать данные на основе пропса filters
   useEffect(() => {
     setFilteredData(
       data.filter(item => {
