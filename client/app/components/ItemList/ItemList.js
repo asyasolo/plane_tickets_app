@@ -40,8 +40,8 @@ function ItemList({ response, sorting }) {
       setTickets(sortedData)
     } else if (sorting == "optimal") {
       const sortedData = tickets.sort((a, b) => {
-        const aRatio = a.price / a.info.duration
-        const bRatio = b.price / b.info.duration
+        const aRatio = a.info.duration / a.price
+        const bRatio = b.info.duration / b.price
         return aRatio - bRatio
       })
       setTickets(sortedData)
