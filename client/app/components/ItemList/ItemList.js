@@ -13,21 +13,19 @@ function ItemList({ response, sorting }) {
 
   useEffect(() => {
     setTickets(response)
-  }, [])
-
-  useEffect(() => {
-    setTickets(response)
   }, [response])
 
   useEffect(() => {
-    if (sorting == "fastest") {
-      const sortedData = tickets.sort((a, b) => a.info.duration - b.info.duration)
+    if (sorting === "fastest") {
+      const sortedData = [...tickets].sort((a, b) => a.info.duration - b.info.duration)
       setTickets(sortedData)
-    } else if (sorting == "cheapest") {
-      const sortedData = tickets.sort((a, b) => a.price - b.price)
+    }
+    if (sorting === "cheapest") {
+      const sortedData = [...tickets].sort((a, b) => a.price - b.price)
       setTickets(sortedData)
-    } else if (sorting == "optimal") {
-      const sortedData = tickets.sort((a, b) => {
+    }
+    if (sorting === "optimal") {
+      const sortedData = [...tickets].sort((a, b) => {
         const aRatio = a.price / a.info.duration
         const bRatio = b.price / b.info.duration
         if (a.price == b.price && a.info.duration > b.info.duration) {
@@ -36,7 +34,7 @@ function ItemList({ response, sorting }) {
       })
       setTickets(sortedData)
     }
-  }, [tickets, sorting])
+  }, [sorting])
 
   return (
     <div>
