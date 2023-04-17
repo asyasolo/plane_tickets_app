@@ -24,7 +24,6 @@ function App() {
 
   const handleSortChange = newSorting => {
     setSorting(newSorting)
-    console.log(sorting)
   }
 
   const handleFilterChange = event => {
