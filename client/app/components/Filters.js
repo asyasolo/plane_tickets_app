@@ -6,16 +6,14 @@ import ItemList from "./ItemList/ItemList"
 function Filters({ filters, sorting }) {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
-  let finalData = []
 
   useEffect(() => {
-    console.log("initial fetching")
     const fetchData = async () => {
       try {
         const response = await api.fetchTickets()
         if (response) {
           setData(response)
-          finalData = response
+          setFilteredData(response)
         }
       } catch (error) {
         console.log(error)
@@ -53,12 +51,11 @@ function Filters({ filters, sorting }) {
         return true
       })
     )
-    finalData = filteredData
   }, [filters])
 
   return (
     <ItemList
-      response={finalData}
+      response={filteredData}
       sorting={sorting}
     />
   )

@@ -13,6 +13,10 @@ function ItemList({ response, sorting }) {
 
   useEffect(() => {
     setTickets(response)
+  }, [])
+
+  useEffect(() => {
+    setTickets(response)
   }, [response])
 
   useEffect(() => {
@@ -38,18 +42,19 @@ function ItemList({ response, sorting }) {
     <div>
       {tickets.length === 0 && <h1>Загрузка</h1>}
 
-      {tickets.slice(0, visibleTickets).map((item, index) => {
-        if (index < visibleTickets) {
-          return (
-            <Item
-              key={item.id}
-              info={item.info}
-              companyId={item.companyId}
-              price={item.price}
-            />
-          )
-        } else return null
-      })}
+      {tickets.length > 0 &&
+        tickets.slice(0, visibleTickets).map((item, index) => {
+          if (index < visibleTickets) {
+            return (
+              <Item
+                key={item.id}
+                info={item.info}
+                companyId={item.companyId}
+                price={item.price}
+              />
+            )
+          } else return null
+        })}
       {visibleTickets < tickets.length && (
         <button
           onClick={handleShowMore}
