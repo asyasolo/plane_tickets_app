@@ -6,18 +6,23 @@ import ItemList from "./ItemList/ItemList"
 function Filters({ filters, sorting }) {
   const [data, setData] = useState([])
   const [filteredData, setFilteredData] = useState([])
+  let finalData = []
 
-  const fetchData = async () => {
-    try {
-      const response = await api.fetchTickets()
-      if (response) {
-        setData(response)
+  useEffect(() => {
+    console.log("initial fetching")
+    const fetchData = async () => {
+      try {
+        const response = await api.fetchTickets()
+        if (response) {
+          setData(response)
+          finalData = response
+        }
+      } catch (error) {
+        console.log(error)
       }
-    } catch (error) {
-      console.log(error)
     }
-  }
-  fetchData()
+    fetchData()
+  }, [])
 
   useEffect(() => {
     setFilteredData(
@@ -48,9 +53,15 @@ function Filters({ filters, sorting }) {
         return true
       })
     )
+    finalData = filteredData
   }, [filters])
 
-  return <ItemList response={filteredData} sorting={sorting} />
+  return (
+    <ItemList
+      response={finalData}
+      sorting={sorting}
+    />
+  )
 }
 
 export default Filters

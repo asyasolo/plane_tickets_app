@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 
 import "./ItemList.css"
 import Item from "./Item/Item"
-import api from "../../utils/api"
 
 function ItemList({ response, sorting }) {
   const [tickets, setTickets] = useState([])
@@ -11,21 +10,6 @@ function ItemList({ response, sorting }) {
   const handleShowMore = () => {
     setVisibleTickets(prevVisibleTickets => prevVisibleTickets + 5)
   }
-
-  useEffect(() => {
-    console.log("fetching first")
-    const fetchData = async () => {
-      try {
-        const ticketResponse = await api.fetchTickets()
-        if (ticketResponse) {
-          setTickets(ticketResponse)
-        }
-      } catch (error) {
-        console.log(error)
-      }
-    }
-    fetchData()
-  }, [])
 
   useEffect(() => {
     setTickets(response)
@@ -56,11 +40,21 @@ function ItemList({ response, sorting }) {
 
       {tickets.slice(0, visibleTickets).map((item, index) => {
         if (index < visibleTickets) {
-          return <Item key={item.id} info={item.info} companyId={item.companyId} price={item.price} />
+          return (
+            <Item
+              key={item.id}
+              info={item.info}
+              companyId={item.companyId}
+              price={item.price}
+            />
+          )
         } else return null
       })}
       {visibleTickets < tickets.length && (
-        <button onClick={handleShowMore} className="browse_btn">
+        <button
+          onClick={handleShowMore}
+          className="browse_btn"
+        >
           ПОКАЗАТЬ ЕЩЕ 5 БИЛЕТОВ
         </button>
       )}
