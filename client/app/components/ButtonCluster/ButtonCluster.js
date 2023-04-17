@@ -26,13 +26,25 @@ function ButtonCluster({ onSortChange }) {
 
   return (
     <div className="button-group">
-      <button className={`left-btn ${activeButton === "cheapest" ? activeClass : inactiveClass}`} onClick={handleCheapestClick} onMouseDown={() => handleClick("cheapest")}>
+      <button
+        className={`left-btn ${activeButton === "cheapest" ? activeClass : inactiveClass}`}
+        onClick={handleCheapestClick}
+        onMouseDown={() => handleClick("cheapest")}
+      >
         САМЫЙ ДЕШЕВЫЙ
       </button>
-      <button className={`middle-btn ${activeButton === "fastest" ? activeClass : inactiveClass}`} onClick={handleFastestClick} onMouseDown={() => handleClick("fastest")}>
+      <button
+        className={`middle-btn ${activeButton === "fastest" ? activeClass : inactiveClass}`}
+        onClick={handleFastestClick}
+        onMouseDown={() => handleClick("fastest")}
+      >
         САМЫЙ БЫСТРЫЙ
       </button>
-      <button className={`right-btn ${activeButton === "optimal" ? activeClass : inactiveClass}`} onClick={handleOptimalClick} onMouseDown={() => handleClick("optimal")}>
+      <button
+        className={`right-btn ${activeButton === "optimal" ? activeClass : inactiveClass}`}
+        onClick={handleOptimalClick}
+        onMouseDown={() => handleClick("optimal")}
+      >
         ОПТИМАЛЬНЫЙ
       </button>
     </div>

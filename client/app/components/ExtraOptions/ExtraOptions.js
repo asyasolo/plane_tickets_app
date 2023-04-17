@@ -8,8 +8,14 @@ import CompaniesOptions from "./CompaniesOptions/CompaniesOptions"
 function ExtraOptions({ filters, onFilterChange, onCompanyChange }) {
   return (
     <div className="menu-group">
-      <StopsOptions filters={filters} onFilterChange={onFilterChange} />
-      <CompaniesOptions filters={filters} onCompanyChange={onCompanyChange} />
+      <StopsOptions
+        filters={filters}
+        onFilterChange={onFilterChange}
+      />
+      <CompaniesOptions
+        filters={filters}
+        onCompanyChange={onCompanyChange}
+      />
     </div>
   )
 }

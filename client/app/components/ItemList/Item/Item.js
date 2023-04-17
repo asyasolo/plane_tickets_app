@@ -62,7 +62,11 @@ function Item(props) {
     <div className="flight-item">
       <div className="fligth-item-header">
         <h1>{props.price.toLocaleString("ru-RU")}</h1>
-        <img src={`./img/${getLogo()}`} alt="" className="flight-logo" />
+        <img
+          src={`./img/${getLogo()}`}
+          alt=""
+          className="flight-logo"
+        />
       </div>
 
       <div className="flight-item-body">

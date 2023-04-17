@@ -50,13 +50,23 @@ function App() {
     <>
       <Header />
       <div className="main">
-        <Form filters={filters} onFilterChange={handleFilterChange} />
+        <Form
+          filters={filters}
+          onFilterChange={handleFilterChange}
+        />
         <HorizontalRule />
         <div className="main-group">
-          <ExtraOptions filters={filters} onFilterChange={handleFilterChange} onCompanyChange={handleCompanyChange} />
+          <ExtraOptions
+            filters={filters}
+            onFilterChange={handleFilterChange}
+            onCompanyChange={handleCompanyChange}
+          />
           <div className="flight-group">
             <ButtonCluster onSortChange={handleSortChange} />
-            <Filters filters={filters} sorting={sorting} />
+            <Filters
+              filters={filters}
+              sorting={sorting}
+            />
           </div>
         </div>
       </div>
